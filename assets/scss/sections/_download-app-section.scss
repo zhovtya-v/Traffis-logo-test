@@ -1,0 +1,71 @@
+.download-app-section {
+    background-image: url("./assets/images/download-app-bg-mob.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center bottom;
+    padding: 48px 0;
+    margin-bottom: 65px;
+
+    @include min-small {
+        padding: 43px 0 39px;
+        margin-bottom: 86px;
+        background-image: url("./assets/images/download-app-bg-tab.png");
+    }
+
+    @include min-medium {
+        padding: 43px 0 55px;
+        margin-bottom: 127px;
+        background-image: url("./assets/images/download-app-bg.png");
+    }
+
+    .title {
+        letter-spacing: -0.5px;
+        margin-bottom: 14px;
+
+        @include min-small {
+            text-align: left;
+            font-size: 32px;
+            letter-spacing: 0;
+        }
+
+        @include min-medium {
+            font-size: 38px;
+            margin-bottom: 7px;
+        }
+    }
+
+    .text {
+        text-align: center;
+        letter-spacing: 0.3px;
+        margin-bottom: 59px;
+
+        @include min-small {
+            margin-bottom: 0;
+            text-align: left;
+            max-width: 318px;
+            letter-spacing: 0;
+            @include rubik_light;
+        }
+
+        @include min-medium {
+            font-size: 24px;
+            max-width: 650px;
+        }
+    }
+
+    .download-app-content {
+        @include min-small {
+            padding-right: 320px;
+            position: relative;
+        }
+    }
+
+    .btn-link {
+        @include min-small {
+            position: absolute;
+            top: 50%;
+            right: 0;
+            @include translate3d(0, -50%, 0px);
+        }
+    }
+}

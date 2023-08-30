@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="aec31282-1d3e-45e7-8cd7-44db6f09c0aa" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings">
+    <execution />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="SCSS File" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectId" id="2TKtmRiCKUZextUs26KDroF0Vzj" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/assets/images" />
+    <property name="list.type.of.created.stylesheet" value="SCSS" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\тре_розгребти\скилет сторінки\assets\scss\component" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Test-tasks\Traffis-logo-test\assets\images" />
+      <recent name="E:\тре_розгребти\скилет сторінки\assets\scss" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="aec31282-1d3e-45e7-8cd7-44db6f09c0aa" name="Default Changelist" comment="" />
+      <created>1690803759075</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1690803759075</updated>
+      <workItem from="1690803760149" duration="315000" />
+      <workItem from="1693139552969" duration="1874000" />
+      <workItem from="1693203993627" duration="17457000" />
+      <workItem from="1693290767578" duration="35350000" />
+      <workItem from="1693387403880" duration="13176000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="690" y="263" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1693140231086">
+      <screen x="0" y="0" width="1920" height="1032" />
+    </state>
+    <state x="690" y="263" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1032/0.-1080.1920.1032@0.0.1920.1032" timestamp="1693140231086" />
+    <state x="740" y="271" key="FileChooserDialogImpl" timestamp="1693308997567">
+      <screen x="0" y="0" width="1920" height="1032" />
+    </state>
+    <state x="740" y="271" key="FileChooserDialogImpl/0.0.1920.1032/0.-1080.1920.1032@0.0.1920.1032" timestamp="1693308997567" />
+    <state x="92" y="92" width="1736" height="848" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1693402546337">
+      <screen x="0" y="0" width="1920" height="1032" />
+    </state>
+    <state x="92" y="92" width="1736" height="848" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.0.1920.1032/0.-1080.1920.1032@0.0.1920.1032" timestamp="1693402546337" />
+    <state x="668" y="220" width="585" height="592" key="find.popup" timestamp="1693404778906">
+      <screen x="0" y="0" width="1920" height="1032" />
+    </state>
+    <state x="668" y="220" width="585" height="592" key="find.popup/0.0.1920.1032/0.-1080.1920.1032@0.0.1920.1032" timestamp="1693404778906" />
+    <state x="616" y="238" key="run.anything.popup" timestamp="1693309468824">
+      <screen x="0" y="0" width="1920" height="1032" />
+    </state>
+    <state x="616" y="238" key="run.anything.popup/0.0.1920.1032/0.-1080.1920.1032@0.0.1920.1032" timestamp="1693309468824" />
+    <state x="623" y="223" width="672" height="678" key="search.everywhere.popup" timestamp="1693391015166">
+      <screen x="0" y="0" width="1920" height="1032" />
+    </state>
+    <state x="623" y="223" width="672" height="678" key="search.everywhere.popup/0.0.1920.1032/0.-1080.1920.1032@0.0.1920.1032" timestamp="1693391015166" />
+  </component>
+</project>

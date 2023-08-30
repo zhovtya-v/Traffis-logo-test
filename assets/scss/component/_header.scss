@@ -1,0 +1,179 @@
+body.opened {
+    .header-section {
+        background: $light-bg-color;
+    }
+}
+
+.header-section {
+    padding: 46px 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 3;
+
+    @include min-small {
+        padding: 43px 0;
+    }
+
+    @include min-medium {
+        padding: 46px 0;
+    }
+
+    .header-wrap {
+        @include display-flex;
+        @include align-items-center;
+        @include justify-content-space-between;
+    }
+
+    .logo {
+        font-size: 22px;
+        color: $primary-text-color;
+        @include rubik_semibold;
+        @include transition(all 0.15s);
+
+        @include min-medium {
+            font-size: 32px;
+
+            &:hover {
+                color: $primary-active-text-color;
+            }
+        }
+    }
+
+    .menu {
+        @include max-medium {
+            position: fixed;
+            top: 110px;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            padding: 25px 15px 15px;
+            background: $light-bg-color;
+            transform: translateX(100%);
+            transition: transform 0.5s;
+            z-index: 2;
+
+            @include display-flex;
+            @include flex-direction-column;
+            @include align-items-center;
+            
+            &.active {
+                transform: translateX(0);
+            }
+        }
+
+        a {
+            font-size: 16px;
+            line-height: 1.46;
+            color: $primary-text-color;
+            text-transform: capitalize;
+            position: relative;
+            margin-bottom: 16px;
+            padding-bottom: 6px;
+            @include transition(color);
+            transition: color 0.2s;
+            @include rubik_medium;
+
+            @include min-medium {
+                margin-bottom: 0;
+
+                &:not(:first-child) {
+                    margin-left: 20px;
+                }
+            }
+
+            @include min-large {
+                &:not(:first-child) {
+                    margin-left: 54px;
+                }
+            }
+
+            &:hover {
+                color: $primary-active-text-color;
+                
+                &:after {
+                    height: 3px;
+                    opacity: 1;
+                    -webkit-transform: translateY(0px);
+                    -moz-transform: translateY(0px);
+                    transform: translateY(0px);
+                    @include translate3d(0,0,0);
+                }
+
+            }
+
+            &:after {
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                height: 1px;
+                background: $primary-active-bg-color;
+                content: '';
+                opacity: 0;
+                -webkit-transition: height 0.3s, opacity 0.3s, -webkit-transform 0.3s;
+                -moz-transition: height 0.3s, opacity 0.3s, -moz-transform 0.3s;
+                transition: height 0.3s, opacity 0.3s, transform 0.3s;
+                -webkit-transform: translateY(-10px);
+                -moz-transform: translateY(-10px);
+                transform: translateY(-10px);
+            }
+        }
+    }
+
+    .nav-btn {
+        @include reset-button;
+
+        width: 32px;
+        height: 32px;
+        position: relative;
+        z-index: 2;
+        overflow: hidden;
+
+        @include min-medium {
+            display: none;
+        }
+
+        &.active {
+            .nav-bar {
+                &:nth-of-type(1) {
+                    top: 50%;
+                    transform: translate(-50%, -50%) rotate(-45deg);
+                }
+
+                &:nth-of-type(2) {
+                    opacity: 0;
+                }
+
+                &:nth-of-type(3) {
+                    top: 50%;
+                    transform: translate(-50%, -50%) rotate(45deg);
+                }
+            }
+        }
+
+        .nav-bar {
+            width: 27px;
+            height: 3px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: $primary-bg-color;
+            transition: all 0.3s ease-in-out;
+
+            &:nth-of-type(1) {
+                top: calc(50% - 4px);
+            }
+
+            &:nth-of-type(2) {
+                top: calc(50% + 3px);
+            }
+
+            &:nth-of-type(3) {
+                top: calc(50% + 10px);
+            }
+        }
+    }
+}

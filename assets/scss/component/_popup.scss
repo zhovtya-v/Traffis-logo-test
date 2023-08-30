@@ -1,0 +1,38 @@
+.popup {
+    opacity: 0;
+    visibility: hidden;
+    z-index: -1;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 15px;
+    background: rgba($primary-bg-color, 0.7);
+    @include display-flex;
+    @include align-items-center;
+    @include justify-content-center;
+
+    &.active {
+        opacity: 1;
+        visibility: visible;
+        z-index: 10;
+    }
+
+    .popup-body {
+        max-width: 500px;
+        width: 100%;
+        @include border-radius(18px);
+        background: $light-bg-color;
+        position: relative;
+        padding: 40px 20px;
+    }
+
+    .title {
+        margin-bottom: 15px;
+    }
+
+    .subtitle {
+        text-align: center;
+    }
+}

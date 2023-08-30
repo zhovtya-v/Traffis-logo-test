@@ -1,0 +1,180 @@
+@import "assets/scss/mixin";
+@import "assets/scss/variable";
+@import "assets/scss/fonts";
+
+/*********************************
+COMMON STYLE
+*********************************/
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box
+}
+a,
+:before, :after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box
+}
+
+.clearfix {
+  &:before, &:after {
+    display: table;
+    content: " ";
+  }
+  &:after {
+    clear: both;
+  }
+}
+
+a,
+a:hover,
+a:focus,
+a:visited {
+  text-decoration: none;
+}
+
+a, a:hover, a:focus,
+input, input:hover, input:focus,
+textarea, textarea:hover, textarea:focus,
+button, button:hover, button:focus, select {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+}
+
+/*********************************
+COMMON STYLE END
+*********************************/
+
+body {
+  @include rubik_light;
+  font-size: 20px;
+  color: $primary-text-color;
+  background-color: $white-bg-color;
+  margin: 0;
+  padding: 0;
+
+  &.opened {
+    overflow: hidden;
+  }
+}
+
+.container {
+  padding: 0 15px;
+  width: 100%;
+
+  @include min-medium {
+    padding: 0 30px;
+  }
+
+  @include min-large {
+    max-width: 1340px;
+    margin: 0 auto;
+  }
+}
+
+.primary-title {
+  font-size: 48px;
+  @include rubik_bold;
+
+  @include min-small {
+    @include rubik_regular;
+  }
+
+  @include min-medium {
+    font-size: 68px;
+  }
+}
+
+.title {
+  font-size: 28px;
+  @include rubik_bold;
+  text-align: center;
+
+  @include min-small {
+    @include rubik_regular;
+  }
+
+  @include min-medium {
+    font-size: 38px;
+  }
+}
+
+.btn {
+  width: 224px;
+  height: 53px;
+  margin: 0 auto;
+  display: block;
+  @include transition(all 0.3s);
+
+  svg {
+    width: 100%;
+    height: auto;
+  }
+
+  @include min-small {
+    width: 297px;
+    height: 70px;
+  }
+
+  @include min-medium {
+    &:hover {
+      @include translate3d(0, -5px, 0);
+    }
+  }
+}
+
+.btn-close {
+  @include reset-button;
+  position: absolute;
+  top: 4px;
+  right: 4px;
+  width: 36px;
+  height: 36px;
+
+  @include min-medium {
+    &:hover {
+      .nav-bar {
+        background-color: $primary-active-bg-color;
+      }
+    }
+  }
+
+  .nav-bar {
+    width: 27px;
+    height: 3px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: $primary-bg-color;
+    transition: all 0.3s ease-in-out;
+
+    &:nth-of-type(1) {
+      top: 50%;
+      transform: translate(-50%, -50%) rotate(-45deg);
+    }
+
+    &:nth-of-type(2) {
+      top: 50%;
+      transform: translate(-50%, -50%) rotate(45deg);
+    }
+  }
+}
+
+
+@import "assets/scss/component/header";
+@import "assets/scss/component/slider";
+@import "assets/scss/component/form";
+@import "assets/scss/component/popup";
+@import "assets/scss/component/footer";
+
+@import "assets/scss/sections/hero-section";
+@import "assets/scss/sections/video-section";
+@import "assets/scss/sections/app-info-section";
+@import "assets/scss/sections/overview-section";
+@import "assets/scss/sections/download-app-section";
+@import "assets/scss/sections/contact-section";

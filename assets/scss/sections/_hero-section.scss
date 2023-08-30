@@ -1,0 +1,114 @@
+.hero-section {
+    background: url("./assets/images/hero-bg.jpg") no-repeat;
+    background-size: cover;
+    background-position: center bottom;
+    padding: 163px 0 18px;
+    margin-bottom: 52px;
+
+    @include min-small {
+        padding: 153px 0 26px;
+        margin-bottom: 95px;
+        overflow: hidden;
+    }
+
+    @include min-large {
+        padding: 173px 0 22px;
+        margin-bottom: 125px;
+    }
+
+    .primary-title {
+        margin: 0 0 21px;
+        text-align: center;
+
+        @include min-small {
+            margin: 0 0 20px;
+        }
+
+        @include min-large {
+            margin: 0 0 14px;
+        }
+    }
+
+    .text {
+        @include rubik_medium;
+        font-size: 20px;
+        padding: 0 5px;
+        text-align: center;
+        margin-bottom: 34px;
+
+        @include min-small {
+            @include rubik_light;
+            font-size: 24px;
+            max-width: 580px;
+            margin: 0 auto 31px;
+            padding: 0;
+        }
+
+        @include min-large {
+            max-width: 650px;
+            margin: 0 auto 45px;
+        }
+    }
+
+    .btn {
+        margin: 0 auto 43px;
+
+        @include min-small {
+            margin: 0 auto 78px;
+        }
+
+        @include min-large {
+            margin: 0 auto 42px;
+        }
+    }
+}
+
+.hero-slider {
+    padding: 0 25px 30px;
+
+    @include min-small {
+        padding: 0 0 30px;
+        margin: 0;
+        overflow: visible !important;
+    }
+
+    @include min-medium {
+        margin: 0;
+    }
+
+    .swiper-wrapper {
+        @include min-small {
+            margin-left: 8%;
+        }
+
+        @include min-medium {
+            margin-left: 10%;
+        }
+    }
+
+    .swiper-slide {
+        height: 322px;
+
+
+        @include min-small {
+            height: 326px;
+            max-width: 29%;
+        }
+
+        @include min-medium {
+            height: 474px;
+            max-width: 25%;
+        }
+
+        &.swiper-slide-active {
+            @include min-small {
+                width: 45%!important;
+                max-width: 100%;
+            }
+
+            @include min-medium {
+                width: 35%!important;
+            }
+        }
+    }
+}

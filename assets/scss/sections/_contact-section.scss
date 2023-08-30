@@ -1,0 +1,121 @@
+.contact-section {
+    @include display-flex;
+
+    @include min-small {
+        overflow: hidden;
+        margin-bottom: 21px;
+    }
+
+    @include min-medium {
+        margin-bottom: 0;
+    }
+
+    @include max-small {
+        @include flex-direction-column-reverse;
+    }
+
+    .title {
+        text-align: left;
+        @include rubik_regular;
+        margin-bottom: 15px;
+
+        @include min-medium {
+            font-size: 38px;
+            margin-bottom: 10px;
+        }
+    }
+
+    .text {
+        letter-spacing: 0.3px;
+
+        @include min-medium {
+            letter-spacing: 0;
+            max-width: 484px;
+        }
+
+        @include max-medium {
+            font-size: 16px;
+            @include rubik_regular;
+        }
+    }
+
+    .image {
+        display: none;
+
+        @include min-small {
+            display: block;
+            height: 100%;
+            margin-top: -5px;
+            margin-right: -15px;
+            background: url("./assets/images/app-info-bg.svg") no-repeat;
+            background-size: 150%;
+            background-position: -175px top;
+        }
+
+        @include min-medium {
+            background-size: 109% auto;
+            background-position: left top;
+        }
+
+        @include min-extra-large {
+            background-size: 100% auto;
+        }
+    }
+
+    .contact-content {
+        margin-bottom: 28px;
+
+        @include min-small {
+            margin-bottom: 0;
+            transform: translate(-100%, 0);
+            flex: 0 0 48.4%;
+        }
+
+        @include min-medium {
+            flex: 0 0 56.56%;
+        }
+
+        @include max-small {
+            padding: 0 15px;
+        }
+    }
+
+    .contact-form {
+
+        @include min-small {
+            flex: 0 0 100%;
+        }
+
+        @include min-medium {
+            padding-bottom: 75px;
+        }
+
+        .title {
+            display: none;
+
+            @include min-small {
+                font-size: 24px;
+                @include rubik_regular;
+                display: block;
+                margin-bottom: 23px;
+            }
+
+            @include min-medium {
+                font-size: 28px;
+                margin-bottom: 27px;
+                margin-top: 6px;
+            }
+        }
+    }
+
+    .form {
+        @include min-small {
+            width: 100%;
+            max-width: 348px;
+        }
+
+        @include min-medium {
+            max-width: 368px;
+        }
+    }
+}

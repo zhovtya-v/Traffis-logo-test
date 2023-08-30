@@ -1,0 +1,183 @@
+.app-info-section {
+    margin-bottom: 90px;
+
+    @include min-medium {
+        margin-bottom: 106px;
+    }
+
+    .title {
+        margin-bottom: 41px;
+        text-align: left;
+
+        @include min-small {
+            margin-bottom: 65px;
+        }
+
+        @include min-medium {
+            text-align: center;
+            margin-bottom: 122px;
+        }
+    }
+
+    .app-info-content {
+        @include min-medium {
+            @include display-flex;
+            @include flex-direction-row-reverse;
+            @include justify-content-space-between;
+        }
+    }
+
+    .steps {
+        margin-bottom: 43px;
+
+        @include min-small {
+            margin-bottom: 32px;
+            margin-left: 20px;
+        }
+
+        @include min-medium {
+            margin-bottom: 0;
+            margin-left: 20px;
+            width: 100%;
+            max-width: 542px;
+        }
+    }
+
+    .step {
+        position: relative;
+        padding-left: 74px;
+        @include display-flex;
+        @include flex-direction-column;
+
+        @include min-small {
+            padding-left: 109px;
+        }
+
+        @include min-medium {
+            padding-left: 93px;
+        }
+
+        &:not(:last-child) {
+            margin-bottom: 50px;
+
+            @include min-small {
+                margin-bottom: 72px;
+            }
+
+            @include min-medium {
+                margin-bottom: 63px;
+            }
+        }
+
+        &:first-child {
+            .step-number {
+                background: #71357C;
+            }
+        }
+
+        &:nth-of-type(2) {
+            .step-number {
+                background: #95D0D5;
+            }
+        }
+
+        &:nth-of-type(3) {
+            .step-number {
+                background: #FD7E50;
+            }
+        }
+
+        &:nth-of-type(4) {
+            .step-number {
+                background: #F35D5D;
+            }
+        }
+    }
+
+    .step-number {
+        position: absolute;
+        top: -5px;
+        left: 0;
+        width: 59px;
+        height: 59px;
+
+        font-size: 32px;
+        line-height: 1;
+        color: $white-text-color;
+        @include display-flex;
+        @include align-items-center;
+        @include justify-content-center;
+        @include border-radius(14px);
+
+        @include min-medium {
+            top: -2px;
+        }
+    }
+
+    .step-title {
+        @include rubik_semibold;
+        font-size: 20px;
+        margin-bottom: 2px;
+
+        @include min-small {
+            font-size: 24px;
+            margin-bottom: 0;
+            @include rubik_regular;
+        }
+
+        @include min-medium {
+            margin-bottom: 3px;
+        }
+    }
+
+    .step-text {
+        letter-spacing: 0.3px;
+
+        @include min-medium {
+            @include rubik_light;
+        }
+    }
+
+    .image-wrap {
+        margin: 0 -15px;
+        padding: 50px 0 26px;
+        background: url("./assets/images/app-info-bg.svg") no-repeat;
+        background-size: cover;
+        background-position: -152px center;
+
+        @include min-small {
+            padding: 71px 0 38px;
+            background-position: center;
+        }
+
+        @include min-medium {
+            margin: 0px 0 0 -129px;
+            padding: 0 0 54px;
+            width: 100%;
+            max-width: 765px;
+            background-position: center bottom;
+            background-size: auto;
+        }
+
+        .image {
+            max-width: 237px;
+            height: 404px;
+            width: 100%;
+            overflow: hidden;
+            margin: 0 auto;
+            background: $primary-bg-color;
+            @include border-radius(24px);
+
+            @include min-small {
+                max-width: 347px;
+                height: 590px;
+            }
+
+            @include min-medium {
+                margin: -84px 0 0 239px;
+                height: 590px;
+            }
+
+        }
+    }
+}

@@ -1,0 +1,201 @@
+.overview-section {
+    margin-bottom: 100px;
+
+    @include min-small {
+        margin-bottom: 70px;
+    }
+
+    @include min-medium {
+        @include display-flex;
+        margin-bottom: 79px;
+    }
+
+    .overview-content-wrap {
+        @include min-medium {
+            flex: 0 0 100%;
+        }
+    }
+
+    .overview-slider {
+        @include min-small {
+            padding-bottom: 69px;
+        }
+
+        @include min-medium {
+            flex: 0 0 49%;
+            transform: translate(-100%, 0);
+            margin-top: 20px;
+            padding: 0;
+        }
+    }
+
+    .title {
+        margin-bottom: 21px;
+
+        @include min-small {
+            text-align: left;
+            margin-bottom: 31px;
+        }
+
+        @include min-medium {
+            margin-bottom: 44px;
+        }
+    }
+
+    .overview-content {
+        margin-bottom: 39px;
+
+        @include min-small {
+            margin-bottom: 51px;
+        }
+
+        @include min-medium {
+            width: 50%;
+            margin-bottom: 0;
+        }
+    }
+
+    .overview-info {
+        @include rubik_regular;
+        margin-bottom: 15px;
+        height: auto;
+        @include transition(all 0.3s);
+
+        @include min-small {
+            margin-bottom: 66px;
+        }
+
+        @include min-medium {
+            @include rubik_light;
+            margin-bottom: 82px;
+        }
+
+        &.less-text {
+            overflow: hidden;
+        }
+
+        strong {
+            @include rubik_semibold;
+
+            @include min-medium {
+                @include rubik_light;
+            }
+        }
+
+        p {
+            margin: 0;
+
+            &:not(:last-child) {
+                margin: 0 0 23px;
+            }
+        }
+
+        ul {
+            @include list;
+            margin-bottom: 26px;
+        }
+    }
+
+    .show-btn {
+        @include reset-button;
+        color: $secondary-text-color;
+        @include display-inline-flex;
+        @include align-items-center;
+        @include rubik_medium;
+        margin-left: 3px;
+        display: none;
+        @include transition(all 0.3s);
+
+        svg {
+            margin-left: 30px;
+
+            circle, path {
+                @include transition(all 0.3s);
+            }
+        }
+
+        @include min-medium {
+            color: $primary-text-color;
+
+            svg {
+                circle, path {
+                    stroke: $primary-text-color;
+                }
+
+            }
+
+            &:hover {
+                color: $primary-active-text-color;
+
+                svg {
+                    circle, path {
+                        stroke: $primary-active-text-color;
+                    }
+
+                }
+            }
+        }
+    }
+
+    .slide {
+        padding-bottom: 45px;
+    }
+
+    .swiper-slide {
+        height: 298px;
+        @include display-flex;
+        @include align-items-center;
+        @include justify-content-center;
+
+        @include min-medium {
+            height: 530px;
+            width: 43%;
+        }
+
+        @include max-small {
+            background: $secondary-bg-color;
+        }
+
+        &.swiper-slide-prev, &.swiper-slide-next {
+            @include min-medium {
+                width: 80%;
+            }
+        }
+
+        &.swiper-slide-active {
+            @include min-medium {
+                width: 43%;
+            }
+        }
+    }
+
+    .swiper-horizontal > .swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal {
+        @include min-medium {
+            bottom: -5px;
+            margin-left: -39px;
+        }
+
+        .swiper-pagination-bullet {
+            @include min-small {
+                width: 11px;
+                height: 11px;
+            }
+
+            @include min-medium {
+                width: 14px;
+                height: 14px;
+                margin: 0 6px;
+            }
+
+            @include max-medium {
+                background: #CFCFCF;
+            }
+        }
+    }
+
+    .swiper-pagination-bullet-active {
+        @include max-medium {
+            background: $secondary-bg-color;
+        }
+    }
+}
