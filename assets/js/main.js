@@ -5,8 +5,7 @@ const menuBtn = document.querySelector('.nav-btn-js');
 const menu = document.querySelector('.menu');
 const menuItem = document.querySelectorAll('.menu a');
 const date = new Date();
-const URLString = window.location.href;
-const url = new URL(URLString);
+
 
 let setYear = () => {
     let year = date.getFullYear();
@@ -30,6 +29,7 @@ menuItem.forEach(function (menuItem) {
     menuItem.addEventListener('click', function () {
         menuBtn.classList.toggle('active');
         menu.classList.toggle('active');
+        body.classList.remove('opened');
     })
 })
 
@@ -90,6 +90,10 @@ function sendForm() {
     popup.classList.add('active');
 }
 
+
+const URLString = window.location.href;
+const url = new URL(URLString);
+
 function getURLParams() {
     let btnLinks = document.querySelectorAll('.btn-link');
     let appOfferLink = url.searchParams.get("app_offer_link");
@@ -135,20 +139,25 @@ function showMoreText() {
 showMoreText();
 
 
-const smoothLinks = document.querySelectorAll('.header-section a[href^="#"]');
-
 function smoothScroll() {
-    for (let smoothLink of smoothLinks) {
-        smoothLink.addEventListener('click', function (e) {
-            e.preventDefault();
-            const id = smoothLink.getAttribute('href');
+    document.querySelectorAll('.header-section a[href^="#"]').forEach(link => {
 
-            document.querySelector(id).scrollIntoView({
-                behavior: 'smooth',
-                block: 'start'
+        link.addEventListener('click', function(e) {
+            e.preventDefault();
+
+            let href = this.getAttribute('href').substring(1);
+
+            const scrollTarget = document.getElementById(href);
+            const topOffset = 60;
+            const elementPosition = scrollTarget.getBoundingClientRect().top;
+            const offsetPosition = elementPosition - topOffset;
+
+            window.scrollBy({
+                top: offsetPosition,
+                behavior: 'smooth'
             });
         });
-    }
+    });
 }
 
 smoothScroll();
